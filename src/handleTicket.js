@@ -1,12 +1,8 @@
 'use strict';
 
-const _ = require('lodash');
 const zendesk = require('node-zendesk');
-
 const config = require('./config');
-
-const zendeskConfig = _.pick(config.zendesk, ['username', 'token', 'remoteUri']);
-const client = zendesk.createClient(zendeskConfig);
+const client = zendesk.createClient(config.zendesk);
 
 module.exports = function handleTicket(ticketId, cb) {
 	client.tickets.show(ticketId, function (err, req, res) {
