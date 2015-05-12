@@ -1,0 +1,27 @@
+{
+  "name": "zendesk-tagger",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lostmyname/zendesk-tagger"
+  },
+  "author": "Callum Macrae <callum@macr.ae>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lostmyname/zendesk-tagger/issues"
+  },
+  "homepage": "https://github.com/Lostmyname/zendesk-tagger",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "express": "^4.12.3",
+    "graceful-fs": "^3.0.6",
+    "js-yaml": "^3.3.0",
+    "lodash": "^3.8.0",
+    "node-zendesk": "^1.1.2"
+  }
+}

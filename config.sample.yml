@@ -1,0 +1,9 @@
+api:
+  port: 3000
+  secret:
+zendesk:
+  username:
+  token:
+  remoteUri: https://lostmyname.zendesk.com/api/v2
+tags:
+  1489351497992948: facebook-english
