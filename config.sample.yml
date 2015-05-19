@@ -6,4 +6,7 @@ zendesk:
   token:
   remoteUri: https://lostmyname.zendesk.com/api/v2
 tags:
-  1489351497992948: facebook-english
+  585052: facebook-english
+  585072: facebook-spanish
+  585042: facebook-german
+  585082: facebook-french

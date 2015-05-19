@@ -5,13 +5,13 @@ const config = require('./config');
 const client = zendesk.createClient(config.zendesk);
 
 module.exports = function handleTicket(ticketId, cb) {
-	client.tickets.show(ticketId, function (err, req, res) {
+	client.tickets.getComments(ticketId, function (err, req, res) {
 		if (err) {
 			cb(err);
 			return;
 		}
 
-		const facebookPage = res.via.source.from.facebook_id.value; // jshint ignore: line
+		const facebookPage = res[0].comments[0].metadata.decoration.source.zendesk_id; // jshint ignore: line
 		const tag = config.tags[facebookPage];
 
 		if (!tag) {
